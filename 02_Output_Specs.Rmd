@@ -1,0 +1,23 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+Goal of "study":
+
+Identify a demographic group to target for advertisements for a product that will only appeal to households making more than $50k per year.
+
+
+Idea for new Flexdashboard output:
+
+
+## Feature Selection and Model Tuning
+- Let end user "tune" model for logistic regression inputs, offering useful feedback about whether the data is likely to be over-fitted
+- Perhaps allow users to visually compare two models against one another
+- Maybe even allow users to optionally upload their own dataset of training data, then run a logistic regression against it and allow tuning
+
+## Client Outcomes
+- Given a chosen model, give the client some probabalistic descriptive and or normative "interpertation help" to understand what sort of outcome they should expect from a particular person
+- Perhaps have an input cost-per-click-through, revenue per person who clicks based on annual income, and a probability of clicking (again based on income)
+- Then show what the expected return on serving an ad to that person is

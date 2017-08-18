@@ -19,11 +19,6 @@ library(pROC)
 library(shiny)
 library(DT)
 
-pred_raw <- read_csv("data/pred.csv")
-m1 <- readRDS("data/logisticModel.rds")
-m2 <- readRDS("data/elasticnetModel.rds")
-n <- nrow(pred_raw)
-
 ```
 
 Inputs {.sidebar}
@@ -34,8 +29,6 @@ Inputs {.sidebar}
 Use the cutoff slider to profile individuals more or less likely to earn over \$50k in yearly income. Data are from the 1994-1995 population surveys conducted by the U.S. Census Bureau. [More Info](https://archive.ics.uci.edu/ml/datasets/Census+Income)
 
 ```{r}
-
-selectInput("model", "Model", choices=c("Logistic" = TRUE, "Elastic Net" = FALSE))
 
 sliderInput("cutoff", label = "Predicted probability cutoff",
             min = 0, max = 100, value = 50, step = 5)
